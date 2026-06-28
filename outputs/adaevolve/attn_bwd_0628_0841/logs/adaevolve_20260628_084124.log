@@ -1,0 +1,285 @@
+2026-06-28 08:41:24,255 - skydiscover.search.utils.logging_utils - INFO - Logging to outputs/adaevolve/attn_bwd_0628_0841/logs/adaevolve_20260628_084124.log
+2026-06-28 08:41:25,628 - skydiscover.search.main_controller - INFO - Set random seed to 42 for reproducibility
+2026-06-28 08:41:25,647 - skydiscover.search.adaevolve.database - INFO - AdaEvolveDatabase initialized: num_islands=2, decay=0.9, intensity=[0.15, 0.5], migration=True (interval=8), unified_archive=True, adaptive_search=True, ucb_selection=True, dynamic_islands=False, paradigm_breakthrough=True
+2026-06-28 08:41:25,647 - skydiscover.search.main_controller - INFO - Initialized discovery process with search strategy = adaevolve and initial program = attn_bwd/starting_point.py
+2026-06-28 08:41:26,473 - skydiscover.llm - INFO - Initialized Anthropic LLM with model: claude-sonnet-4-6
+2026-06-28 08:41:26,475 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:41:26,491 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:41:26,522 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:41:26,579 - skydiscover.prompt.default.prompt - INFO - Initialized default context builder
+2026-06-28 08:41:26,641 - skydiscover.prompt.default.prompt - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-06-28 08:41:26,651 - skydiscover.evaluation.evaluator - INFO - Initialized evaluator with attn_bwd/evaluator.py
+2026-06-28 08:41:26,652 - skydiscover.search.default_discovery_manager - INFO - DiscoveryManager initialized: num_inspirations=4
+2026-06-28 08:41:26,665 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:41:26,775 - skydiscover.prompt.default.prompt - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-06-28 08:41:26,793 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:41:26,822 - skydiscover.evaluation.evaluator - INFO - Initialized evaluator with attn_bwd/evaluator.py
+2026-06-28 08:41:26,824 - skydiscover.search.adaevolve.manager - INFO - Paradigm LLM: using guide_models [claude-sonnet-4-6]
+2026-06-28 08:41:26,831 - skydiscover.search.adaevolve.manager - INFO - AdaEvolveManager initialized (language=python, paradigm_breakthrough=True)
+2026-06-28 08:41:26,831 - skydiscover.search.main_controller - INFO - Adding initial program to database
+2026-06-28 08:41:26,832 - root - INFO - Evaluating program 10ff5e7e-5f85-4368-980a-0d452165d1cf
+2026-06-28 08:41:41,346 - skydiscover.evaluation.evaluator - INFO - Evaluated program 10ff5e7e-5f85-4368-980a-0d452165d1cf in 14.51s: combined_score=0.2204, geomean_us=3430.6870
+2026-06-28 08:41:41,347 - skydiscover.search.base_database - INFO - Database has 1 programs, best program score is 0.220364
+2026-06-28 08:41:41,349 - skydiscover.search.adaevolve.manager - INFO - AdaEvolve: Running 25 iterations across 2 islands
+2026-06-28 08:41:41,353 - skydiscover.search.adaevolve.manager - INFO - AdaEvolve iteration stats will be logged to: outputs/adaevolve/attn_bwd_0628_0841/adaevolve_iteration_stats_20260628_084141.jsonl
+2026-06-28 08:41:41,354 - skydiscover.search.adaevolve.manager - INFO - Seeded island 1
+2026-06-28 08:42:02,333 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:42:02,368 - root - INFO - Evaluating program 9a099588-6d92-4804-b897-18d701926943
+2026-06-28 08:42:33,465 - skydiscover.evaluation.evaluator - INFO - Evaluated program 9a099588-6d92-4804-b897-18d701926943 in 31.10s: combined_score=0.3434, geomean_us=2201.4490
+2026-06-28 08:42:33,467 - skydiscover.search.adaevolve.manager - INFO - Iteration 1: Program 9a099588 (parent: 10ff5e7e) completed in 52.11s
+2026-06-28 08:42:33,467 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.3434, geomean_us=2201.4490
+2026-06-28 08:42:33,469 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 1
+2026-06-28 08:42:58,830 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:42:58,845 - root - INFO - Evaluating program d2a31ebe-bdbb-4e68-9fd1-8b3de4d052c7
+2026-06-28 08:43:31,127 - skydiscover.evaluation.evaluator - INFO - Evaluated program d2a31ebe-bdbb-4e68-9fd1-8b3de4d052c7 in 32.28s: combined_score=0.3317, geomean_us=2278.9560
+2026-06-28 08:43:31,130 - skydiscover.search.adaevolve.manager - INFO - Iteration 2: Program d2a31ebe (parent: ce0c9aef) completed in 57.64s
+2026-06-28 08:43:31,131 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.3317, geomean_us=2278.9560
+2026-06-28 08:45:18,176 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:45:18,196 - root - INFO - Evaluating program 8d337bad-d1be-486d-a3d3-12d1717a8855
+2026-06-28 08:45:55,637 - skydiscover.evaluation.evaluator - INFO - Evaluated program 8d337bad-d1be-486d-a3d3-12d1717a8855 in 37.44s: combined_score=0.3371, geomean_us=2242.5460
+2026-06-28 08:45:55,640 - skydiscover.search.adaevolve.manager - INFO - Iteration 3: Program 8d337bad (parent: 9a099588) completed in 144.50s
+2026-06-28 08:45:55,641 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.3371, geomean_us=2242.5460
+2026-06-28 08:46:14,635 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:46:14,687 - root - INFO - Evaluating program 3f928fa7-352a-496e-a150-2c06b0437ad4
+2026-06-28 08:47:07,516 - skydiscover.evaluation.evaluator - INFO - Evaluated program 3f928fa7-352a-496e-a150-2c06b0437ad4 in 52.83s: combined_score=0.3542, geomean_us=2134.3060
+2026-06-28 08:47:07,518 - skydiscover.search.adaevolve.manager - INFO - Iteration 4: Program 3f928fa7 (parent: ce0c9aef) completed in 71.85s
+2026-06-28 08:47:07,519 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.3542, geomean_us=2134.3060
+2026-06-28 08:47:07,520 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 4
+2026-06-28 08:48:52,148 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:48:52,165 - root - INFO - Evaluating program ea4184c7-6103-4037-97a4-cf91f361c178
+2026-06-28 08:49:31,244 - skydiscover.evaluation.evaluator - INFO - Evaluated program ea4184c7-6103-4037-97a4-cf91f361c178 in 39.08s: combined_score=0.4307, geomean_us=1755.2820
+2026-06-28 08:49:31,246 - skydiscover.search.adaevolve.manager - INFO - Iteration 5: Program ea4184c7 (parent: 3f928fa7) completed in 143.70s
+2026-06-28 08:49:31,246 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.4307, geomean_us=1755.2820
+2026-06-28 08:49:31,247 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 5
+2026-06-28 08:49:31,247 - skydiscover.search.adaevolve.manager - INFO - Checkpoint interval reached at iteration 5
+2026-06-28 08:49:31,249 - skydiscover.search.base_database - INFO - Database has 7 programs, best program score is 0.430700
+2026-06-28 08:49:31,357 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 7 programs to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_5
+2026-06-28 08:49:31,369 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_5
+2026-06-28 08:49:31,387 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 5 with metrics: combined_score=0.4307, geomean_us=1755.2820
+2026-06-28 08:49:31,388 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 5 to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_5
+2026-06-28 08:49:50,127 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:49:50,142 - root - INFO - Evaluating program 0d6eea04-d518-49f8-9e1f-0f0018003780
+2026-06-28 08:50:40,375 - skydiscover.evaluation.evaluator - INFO - Evaluated program 0d6eea04-d518-49f8-9e1f-0f0018003780 in 50.23s: combined_score=0.7004, geomean_us=1079.3550
+2026-06-28 08:50:40,378 - skydiscover.search.adaevolve.manager - INFO - Iteration 6: Program 0d6eea04 (parent: 9a099588) completed in 68.94s
+2026-06-28 08:50:40,379 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.7004, geomean_us=1079.3550
+2026-06-28 08:50:40,380 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 6
+2026-06-28 08:50:59,703 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:50:59,727 - root - INFO - Evaluating program 31faf506-b8be-4f53-89b5-6407aa8773d4
+2026-06-28 08:51:50,136 - skydiscover.evaluation.evaluator - INFO - Evaluated program 31faf506-b8be-4f53-89b5-6407aa8773d4 in 50.41s: combined_score=0.7059, geomean_us=1070.9780
+2026-06-28 08:51:50,139 - skydiscover.search.adaevolve.manager - INFO - Iteration 7: Program 31faf506 (parent: 8d337bad) completed in 69.70s
+2026-06-28 08:51:50,140 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.7059, geomean_us=1070.9780
+2026-06-28 08:51:50,141 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 7
+2026-06-28 08:52:08,493 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:52:08,524 - root - INFO - Evaluating program 5e224c71-57f7-49e0-aa3c-9e7de60c5893
+2026-06-28 08:52:47,222 - skydiscover.evaluation.evaluator - INFO - Evaluated program 5e224c71-57f7-49e0-aa3c-9e7de60c5893 in 38.70s: combined_score=0.7024, geomean_us=1076.3640
+2026-06-28 08:52:47,225 - skydiscover.search.adaevolve.manager - INFO - Iteration 8: Program 5e224c71 (parent: ea4184c7) completed in 57.04s
+2026-06-28 08:52:47,226 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.7024, geomean_us=1076.3640
+2026-06-28 08:52:47,282 - skydiscover.search.adaevolve.database - INFO - Migration completed at iteration 8
+2026-06-28 08:54:36,405 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:54:36,430 - root - INFO - Evaluating program 93d10648-1e06-4b7e-930e-ec622df6f91c
+2026-06-28 08:55:15,278 - skydiscover.evaluation.evaluator - INFO - Evaluated program 93d10648-1e06-4b7e-930e-ec622df6f91c in 38.85s: combined_score=0.7005, geomean_us=1079.2780
+2026-06-28 08:55:15,280 - skydiscover.search.adaevolve.manager - INFO - Iteration 9: Program 93d10648 (parent: 31faf506) completed in 147.99s
+2026-06-28 08:55:15,281 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.7005, geomean_us=1079.2780
+2026-06-28 08:56:07,307 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:56:07,327 - root - INFO - Evaluating program 08964d45-454f-4160-94a6-e5af8e58043e
+2026-06-28 08:56:50,174 - skydiscover.evaluation.evaluator - INFO - Evaluated program 08964d45-454f-4160-94a6-e5af8e58043e in 42.85s: combined_score=0.5280, geomean_us=1431.9310
+2026-06-28 08:56:50,176 - skydiscover.search.adaevolve.manager - INFO - Iteration 10: Program 08964d45 (parent: 5e224c71) completed in 94.75s
+2026-06-28 08:56:50,177 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.5280, geomean_us=1431.9310
+2026-06-28 08:56:50,179 - skydiscover.search.adaevolve.manager - INFO - Checkpoint interval reached at iteration 10
+2026-06-28 08:56:50,180 - skydiscover.search.base_database - INFO - Database has 16 programs, best program score is 0.705897
+2026-06-28 08:56:50,380 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 16 programs to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_10
+2026-06-28 08:56:50,391 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_10
+2026-06-28 08:56:50,427 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 10 with metrics: combined_score=0.7059, geomean_us=1070.9780
+2026-06-28 08:56:50,429 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 10 to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_10
+2026-06-28 08:57:05,204 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:57:05,227 - root - INFO - Evaluating program cf8ad6dd-d02c-4e3a-9ef1-e48dbcb4c2b4
+2026-06-28 08:57:51,527 - skydiscover.evaluation.evaluator - INFO - Evaluated program cf8ad6dd-d02c-4e3a-9ef1-e48dbcb4c2b4 in 46.30s: combined_score=0.6887, geomean_us=1097.7220
+2026-06-28 08:57:51,530 - skydiscover.search.adaevolve.manager - INFO - Iteration 11: Program cf8ad6dd (parent: d2a31ebe) completed in 60.97s
+2026-06-28 08:57:51,530 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.6887, geomean_us=1097.7220
+2026-06-28 08:59:28,328 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:59:28,343 - root - INFO - Evaluating program 8a324c5f-6bad-4e94-bd9e-605d23eb2cb7
+2026-06-28 09:00:24,063 - skydiscover.evaluation.evaluator - INFO - Evaluated program 8a324c5f-6bad-4e94-bd9e-605d23eb2cb7 in 55.72s: combined_score=0.6141, geomean_us=1231.0930
+2026-06-28 09:00:24,066 - skydiscover.search.adaevolve.manager - INFO - Iteration 12: Program 8a324c5f (parent: 31faf506) completed in 152.40s
+2026-06-28 09:00:24,066 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.6141, geomean_us=1231.0930
+2026-06-28 09:00:24,142 - skydiscover.search.adaevolve.manager - INFO - Global paradigm stagnation detected, generating breakthrough ideas...
+2026-06-28 09:00:50,526 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:00:50,546 - skydiscover.search.adaevolve.paradigm.generator - INFO - Generated 2 paradigms:
+2026-06-28 09:00:50,547 - skydiscover.search.adaevolve.paradigm.generator - INFO -   [1] Custom Triton kernel fusing dropout backward + softmax backward + both BMMs (approach: triton.jit)
+2026-06-28 09:00:50,550 - skydiscover.search.adaevolve.paradigm.generator - INFO -   [2] Flash-attention-style fused Triton kernel using CUDA graphs + optimized memory layout (approach: triton.jit.fused_flash_style)
+2026-06-28 09:00:50,550 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Set 2 new paradigms (best score: 0.705897)
+2026-06-28 09:00:50,551 - skydiscover.search.adaevolve.manager - INFO - Generated 2 breakthrough paradigms
+2026-06-28 09:00:50,566 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 1/2 (1/2): Custom Triton kernel fusing dropout backward + softmax backward + both BMMs
+2026-06-28 09:02:08,950 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:02:08,978 - root - INFO - Evaluating program 808704a1-847f-4b24-b5b2-57ef5335bb0a
+2026-06-28 09:02:28,477 - skydiscover.evaluation.evaluator - INFO - Evaluated program 808704a1-847f-4b24-b5b2-57ef5335bb0a in 19.50s: combined_score=0.5835, geomean_us=1295.5360
+2026-06-28 09:02:28,517 - skydiscover.search.adaevolve.manager - INFO - Iteration 13: Program 808704a1 (parent: 31faf506) completed in 97.91s
+2026-06-28 09:02:28,519 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.5835, geomean_us=1295.5360
+2026-06-28 09:02:28,548 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 2/2 (1/2): Flash-attention-style fused Triton kernel using CUDA graphs + optimized memory layout
+2026-06-28 09:03:57,140 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:03:57,155 - root - INFO - Evaluating program 867faa55-3364-408f-b81d-be303038097a
+2026-06-28 09:04:00,126 - skydiscover.evaluation.evaluator - INFO - Evaluated program 867faa55-3364-408f-b81d-be303038097a in 2.97s: combined_score=0.0000, error=Correctness check failed — see test_details, geomean_us=0.0000
+2026-06-28 09:04:00,202 - skydiscover.search.adaevolve.manager - INFO - Iteration 14: Program 867faa55 (parent: 31faf506) completed in 91.58s
+2026-06-28 09:04:00,211 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.0000, error=Correctness check failed — see test_details, geomean_us=0.0000
+2026-06-28 09:04:00,232 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 1/2 (2/2): Custom Triton kernel fusing dropout backward + softmax backward + both BMMs
+2026-06-28 09:05:29,167 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:05:29,186 - root - INFO - Evaluating program 1efb8a10-cf3e-4bdf-922c-d257b3a16387
+2026-06-28 09:05:32,115 - skydiscover.evaluation.evaluator - INFO - Evaluated program 1efb8a10-cf3e-4bdf-922c-d257b3a16387 in 2.93s: combined_score=0.0000, error=Failed to load submission:
+Traceback (most recent call last):
+  File "/root/eval_modal_attn_bwd.py", line 247, in evaluate_kernel
+    custom_kernel = mod.custom_kernel
+                    ^^^^^^^^^^^^^^^^^
+AttributeError: module 'submission' has no attribute 'custom_kernel', geomean_us=0.0000
+2026-06-28 09:05:32,131 - skydiscover.search.adaevolve.manager - INFO - Iteration 15: Program 1efb8a10 (parent: 31faf506) completed in 91.88s
+2026-06-28 09:05:32,132 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.0000, error=Failed to load submission:
+Traceback (most recent call last):
+  File "/root/eval_modal_attn_bwd.py", line 247, in evaluate_kernel
+    custom_kernel = mod.custom_kernel
+                    ^^^^^^^^^^^^^^^^^
+AttributeError: module 'submission' has no attribute 'custom_kernel', geomean_us=0.0000
+2026-06-28 09:05:32,135 - skydiscover.search.adaevolve.manager - INFO - Checkpoint interval reached at iteration 15
+2026-06-28 09:05:32,136 - skydiscover.search.base_database - INFO - Database has 18 programs, best program score is 0.705897
+2026-06-28 09:05:32,453 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 18 programs to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_15
+2026-06-28 09:05:32,465 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_15
+2026-06-28 09:05:32,482 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 15 with metrics: combined_score=0.7059, geomean_us=1070.9780
+2026-06-28 09:05:32,483 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 15 to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_15
+2026-06-28 09:05:32,503 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 2/2 (2/2): Flash-attention-style fused Triton kernel using CUDA graphs + optimized memory layout
+2026-06-28 09:05:32,509 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:07:06,372 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:07:06,387 - root - INFO - Evaluating program 560b3c88-8b82-4763-bd10-16fb743a460c
+2026-06-28 09:07:09,273 - skydiscover.evaluation.evaluator - INFO - Evaluated program 560b3c88-8b82-4763-bd10-16fb743a460c in 2.89s: combined_score=0.0000, error=Correctness check failed — see test_details, geomean_us=0.0000
+2026-06-28 09:07:09,321 - skydiscover.search.adaevolve.manager - INFO - Iteration 16: Program 560b3c88 (parent: 31faf506) completed in 96.76s
+2026-06-28 09:07:09,323 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.0000, error=Correctness check failed — see test_details, geomean_us=0.0000
+2026-06-28 09:07:09,325 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:07:09,325 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:07:09,326 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:07:09,372 - skydiscover.search.adaevolve.database - INFO - Migration completed at iteration 16
+2026-06-28 09:07:09,373 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:07:09,374 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:07:09,375 - skydiscover.search.adaevolve.manager - INFO - Global paradigm stagnation detected, generating breakthrough ideas...
+2026-06-28 09:07:36,536 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:07:36,565 - skydiscover.search.adaevolve.paradigm.generator - INFO - Generated 2 paradigms:
+2026-06-28 09:07:36,567 - skydiscover.search.adaevolve.paradigm.generator - INFO -   [1] Custom Triton kernel fusing dP computation, dropout backward, and softmax backward into a single kernel, with a separate optimized dV kernel exploiting GQA (approach: triton.jit)
+2026-06-28 09:07:36,567 - skydiscover.search.adaevolve.paradigm.generator - INFO -   [2] Pure PyTorch with careful memory layout optimization: avoid torch.compile overhead, use einsum/bmm with optimal tensor layouts and explicit float32 promotion only where needed (approach: torch.einsum)
+2026-06-28 09:07:36,569 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Archived 2 paradigms (improvement: +0.000000):
+2026-06-28 09:07:36,570 - skydiscover.search.adaevolve.paradigm.tracker - INFO -   [FAILED] Custom Triton kernel fusing dropout backward + softmax backward + both BMMs (uses: 2)
+2026-06-28 09:07:36,571 - skydiscover.search.adaevolve.paradigm.tracker - INFO -   [FAILED] Flash-attention-style fused Triton kernel using CUDA graphs + optimized memory layout (uses: 2)
+2026-06-28 09:07:36,572 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Set 2 new paradigms (best score: 0.705897)
+2026-06-28 09:07:36,574 - skydiscover.search.adaevolve.manager - INFO - Generated 2 breakthrough paradigms
+2026-06-28 09:07:36,717 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 1/2 (1/2): Custom Triton kernel fusing dP computation, dropout backward, and softmax backward into a single kernel, with a separate optimized dV kernel exploiting GQA
+2026-06-28 09:09:05,964 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:09:05,980 - root - INFO - Evaluating program db122a64-1ec1-434a-a9e4-5e5c9ffea317
+2026-06-28 09:09:11,630 - skydiscover.evaluation.evaluator - INFO - Evaluated program db122a64-1ec1-434a-a9e4-5e5c9ffea317 in 5.65s: combined_score=0.0000, error=Correctness check failed — see test_details, geomean_us=0.0000
+2026-06-28 09:09:11,675 - skydiscover.search.adaevolve.manager - INFO - Iteration 17: Program db122a64 (parent: 31faf506) completed in 94.90s
+2026-06-28 09:09:11,676 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.0000, error=Correctness check failed — see test_details, geomean_us=0.0000
+2026-06-28 09:09:11,694 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 2/2 (1/2): Pure PyTorch with careful memory layout optimization: avoid torch.compile overhead, use einsum/bmm with optimal tensor layouts and explicit float32 promotion only where needed
+2026-06-28 09:10:23,004 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:10:23,030 - root - INFO - Evaluating program 3e716c46-6fa0-4ef2-b7b3-bf08f4b8e6f2
+2026-06-28 09:10:39,532 - skydiscover.evaluation.evaluator - INFO - Evaluated program 3e716c46-6fa0-4ef2-b7b3-bf08f4b8e6f2 in 16.50s: combined_score=0.3397, geomean_us=2225.4870
+2026-06-28 09:10:39,533 - skydiscover.search.adaevolve.manager - INFO - Iteration 18: Program 3e716c46 (parent: 31faf506) completed in 87.84s
+2026-06-28 09:10:39,535 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.3397, geomean_us=2225.4870
+2026-06-28 09:10:39,630 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 1/2 (2/2): Custom Triton kernel fusing dP computation, dropout backward, and softmax backward into a single kernel, with a separate optimized dV kernel exploiting GQA
+2026-06-28 09:12:12,310 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:12:12,328 - root - INFO - Evaluating program 4fc35042-1607-4e64-80fa-f442be1423c6
+2026-06-28 09:12:15,431 - skydiscover.evaluation.evaluator - INFO - Evaluated program 4fc35042-1607-4e64-80fa-f442be1423c6 in 3.10s: combined_score=0.0000, error=Correctness check failed — see test_details, geomean_us=0.0000
+2026-06-28 09:12:15,480 - skydiscover.search.adaevolve.manager - INFO - Iteration 19: Program 4fc35042 (parent: 31faf506) completed in 95.80s
+2026-06-28 09:12:15,481 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.0000, error=Correctness check failed — see test_details, geomean_us=0.0000
+2026-06-28 09:12:15,498 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 2/2 (2/2): Pure PyTorch with careful memory layout optimization: avoid torch.compile overhead, use einsum/bmm with optimal tensor layouts and explicit float32 promotion only where needed
+2026-06-28 09:12:15,521 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:12:42,070 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:12:42,143 - root - INFO - Evaluating program 29bfb2b5-2293-4517-89f6-9cc931a30c9e
+2026-06-28 09:12:58,655 - skydiscover.evaluation.evaluator - INFO - Evaluated program 29bfb2b5-2293-4517-89f6-9cc931a30c9e in 16.51s: combined_score=0.3179, geomean_us=2377.7400
+2026-06-28 09:12:58,679 - skydiscover.search.adaevolve.manager - INFO - Iteration 20: Program 29bfb2b5 (parent: 31faf506) completed in 43.13s
+2026-06-28 09:12:58,679 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.3179, geomean_us=2377.7400
+2026-06-28 09:12:58,680 - skydiscover.search.adaevolve.manager - INFO - Checkpoint interval reached at iteration 20
+2026-06-28 09:12:58,681 - skydiscover.search.base_database - INFO - Database has 20 programs, best program score is 0.705897
+2026-06-28 09:12:58,971 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 19 programs to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_20
+2026-06-28 09:12:58,984 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_20
+2026-06-28 09:12:59,021 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 20 with metrics: combined_score=0.7059, geomean_us=1070.9780
+2026-06-28 09:12:59,022 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 20 to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_20
+2026-06-28 09:12:59,024 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:12:59,025 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:12:59,026 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:12:59,036 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:12:59,037 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:12:59,037 - skydiscover.search.adaevolve.manager - INFO - Global paradigm stagnation detected, generating breakthrough ideas...
+2026-06-28 09:13:23,503 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:13:23,530 - skydiscover.search.adaevolve.paradigm.generator - INFO - Generated 2 paradigms:
+2026-06-28 09:13:23,531 - skydiscover.search.adaevolve.paradigm.generator - INFO -   [1] Pure optimized PyTorch without torch.compile, using optimal tensor layouts and einsum for GQA-aware computation (approach: torch.einsum)
+2026-06-28 09:13:23,532 - skydiscover.search.adaevolve.paradigm.generator - INFO -   [2] Inline CUDA kernel using load_inline with cuBLAS batched GEMM and custom elementwise CUDA kernels for the fused dropout+softmax backward (approach: torch.utils.cpp_extension.load_inline)
+2026-06-28 09:13:23,535 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Archived 2 paradigms (improvement: +0.000000):
+2026-06-28 09:13:23,536 - skydiscover.search.adaevolve.paradigm.tracker - INFO -   [FAILED] Custom Triton kernel fusing dP computation, dropout backward, and softmax backward into a single kernel, with a separate optimized dV kernel exploiting GQA (uses: 2)
+2026-06-28 09:13:23,536 - skydiscover.search.adaevolve.paradigm.tracker - INFO -   [FAILED] Pure PyTorch with careful memory layout optimization: avoid torch.compile overhead, use einsum/bmm with optimal tensor layouts and explicit float32 promotion only where needed (uses: 2)
+2026-06-28 09:13:23,537 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Set 2 new paradigms (best score: 0.705897)
+2026-06-28 09:13:23,540 - skydiscover.search.adaevolve.manager - INFO - Generated 2 breakthrough paradigms
+2026-06-28 09:13:23,549 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 1/2 (1/2): Pure optimized PyTorch without torch.compile, using optimal tensor layouts and einsum for GQA-aware computation
+2026-06-28 09:13:45,177 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:13:45,192 - root - INFO - Evaluating program d35b2668-c1b4-4839-841e-bf172d25ae52
+2026-06-28 09:13:57,428 - skydiscover.evaluation.evaluator - INFO - Evaluated program d35b2668-c1b4-4839-841e-bf172d25ae52 in 12.24s: combined_score=0.3565, geomean_us=2120.5280
+2026-06-28 09:13:57,475 - skydiscover.search.adaevolve.manager - INFO - Iteration 21: Program d35b2668 (parent: 31faf506) completed in 33.88s
+2026-06-28 09:13:57,476 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.3565, geomean_us=2120.5280
+2026-06-28 09:13:57,500 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 2/2 (1/2): Inline CUDA kernel using load_inline with cuBLAS batched GEMM and custom elementwise CUDA kernels for the fused dropout+softmax backward
+2026-06-28 09:15:29,083 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:15:29,121 - root - INFO - Evaluating program 47d8830c-fb22-4049-bc11-c3b0d6c74252
+2026-06-28 09:16:21,231 - skydiscover.evaluation.evaluator - INFO - Evaluated program 47d8830c-fb22-4049-bc11-c3b0d6c74252 in 52.11s: combined_score=0.7146, geomean_us=1057.9270
+2026-06-28 09:16:21,309 - skydiscover.search.adaevolve.manager - INFO - Iteration 22: Program 47d8830c (parent: 31faf506) completed in 143.72s
+2026-06-28 09:16:21,314 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.7146, geomean_us=1057.9270
+2026-06-28 09:16:21,319 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 22
+2026-06-28 09:16:21,461 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 1/2 (2/2): Pure optimized PyTorch without torch.compile, using optimal tensor layouts and einsum for GQA-aware computation
+2026-06-28 09:16:51,418 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:16:51,443 - root - INFO - Evaluating program 2452d13c-5dbb-4302-92b4-6aa8f98f10f1
+2026-06-28 09:17:14,736 - skydiscover.evaluation.evaluator - INFO - Evaluated program 2452d13c-5dbb-4302-92b4-6aa8f98f10f1 in 23.29s: combined_score=0.2588, geomean_us=2921.6240
+2026-06-28 09:17:14,737 - skydiscover.search.adaevolve.manager - INFO - Iteration 23: Program 2452d13c (parent: 47d8830c) completed in 53.28s
+2026-06-28 09:17:14,739 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.2588, geomean_us=2921.6240
+2026-06-28 09:17:14,852 - skydiscover.search.adaevolve.paradigm.tracker - INFO - Using paradigm 2/2 (2/2): Inline CUDA kernel using load_inline with cuBLAS batched GEMM and custom elementwise CUDA kernels for the fused dropout+softmax backward
+2026-06-28 09:17:14,854 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:19:07,431 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:19:07,448 - root - INFO - Evaluating program 83298298-a0bd-43e7-aee1-baef7b63a187
+2026-06-28 09:19:13,296 - skydiscover.evaluation.evaluator - INFO - Evaluated program 83298298-a0bd-43e7-aee1-baef7b63a187 in 5.85s: combined_score=0.0000, error=Failed to load submission:
+Traceback (most recent call last):
+  File "/root/eval_modal_attn_bwd.py", line 246, in evaluate_kernel
+    spec.loader.exec_module(mod)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<froz, geomean_us=0.0000
+2026-06-28 09:19:13,414 - skydiscover.search.adaevolve.manager - INFO - Iteration 24: Program 83298298 (parent: 47d8830c) completed in 118.44s
+2026-06-28 09:19:13,418 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.0000, error=Failed to load submission:
+Traceback (most recent call last):
+  File "/root/eval_modal_attn_bwd.py", line 246, in evaluate_kernel
+    spec.loader.exec_module(mod)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<froz, geomean_us=0.0000
+2026-06-28 09:19:13,420 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:19:13,421 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:19:13,422 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:19:13,503 - skydiscover.search.adaevolve.database - INFO - Migration completed at iteration 24
+2026-06-28 09:19:13,512 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:19:13,524 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:19:13,525 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:20:06,954 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 09:20:06,972 - root - INFO - Evaluating program 331eefdb-413d-47f9-a6a5-7c0a1829e88d
+2026-06-28 09:20:41,054 - skydiscover.evaluation.evaluator - INFO - Evaluated program 331eefdb-413d-47f9-a6a5-7c0a1829e88d in 34.08s: combined_score=0.7211, geomean_us=1048.4310
+2026-06-28 09:20:41,102 - skydiscover.search.adaevolve.manager - INFO - Iteration 25: Program 331eefdb (parent: e56fe51e) completed in 87.53s
+2026-06-28 09:20:41,109 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.7211, geomean_us=1048.4310
+2026-06-28 09:20:41,111 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 25
+2026-06-28 09:20:41,112 - skydiscover.search.adaevolve.manager - INFO - Checkpoint interval reached at iteration 25
+2026-06-28 09:20:41,114 - skydiscover.search.base_database - INFO - Database has 23 programs, best program score is 0.721077
+2026-06-28 09:20:41,358 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 20 programs to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_25
+2026-06-28 09:20:41,371 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_25
+2026-06-28 09:20:41,386 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 25 with metrics: combined_score=0.7211, geomean_us=1048.4310
+2026-06-28 09:20:41,387 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 25 to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_25
+2026-06-28 09:20:41,684 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:20:41,685 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:20:41,686 - skydiscover.search.adaevolve.paradigm.tracker - INFO - All paradigms exhausted, will archive on next check
+2026-06-28 09:20:41,694 - skydiscover.search.adaevolve.manager - INFO - AdaEvolve completed
+2026-06-28 09:20:41,695 - skydiscover.search.base_database - INFO - Database has 20 programs, best program score is 0.721077
+2026-06-28 09:20:41,695 - skydiscover.search.adaevolve.manager - INFO - AdaEvolve iteration stats saved to: outputs/adaevolve/attn_bwd_0628_0841/adaevolve_iteration_stats_20260628_084141.jsonl
+2026-06-28 09:20:41,941 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 20 programs to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_25
+2026-06-28 09:20:41,951 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_25
+2026-06-28 09:20:41,970 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 25 with metrics: combined_score=0.7211, geomean_us=1048.4310
+2026-06-28 09:20:41,970 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 25 to outputs/adaevolve/attn_bwd_0628_0841/checkpoints/checkpoint_25
+2026-06-28 09:20:41,975 - skydiscover.search.main_controller - INFO - Using tracked best program: 331eefdb-413d-47f9-a6a5-7c0a1829e88d
+2026-06-28 09:20:41,976 - skydiscover.search.main_controller - INFO - Discovery process complete. Best program has metrics: combined_score=0.7211, geomean_us=1048.4310
+2026-06-28 09:20:41,992 - skydiscover.search.main_controller - INFO - Saved best program to outputs/adaevolve/attn_bwd_0628_0841/best/best_program.py with program info to outputs/adaevolve/attn_bwd_0628_0841/best/best_program_info.json

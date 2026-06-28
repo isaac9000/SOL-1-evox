@@ -1,13 +1,10 @@
 [project]
 name = "attn-bwd-advisor"
 version = "0.1.0"
-description = "Advisor-worker agent pair for iterative attention-backward kernel optimization on B200"
+description = "SkyDiscover-powered iterative attention-backward kernel optimization on B200"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "anthropic>=0.90.0",
-    "python-dotenv>=1.0.0",
-    "requests>=2.32.0",
-    "matplotlib>=3.9.0",
+    "skydiscover",
     "modal>=0.73.0",
 ]

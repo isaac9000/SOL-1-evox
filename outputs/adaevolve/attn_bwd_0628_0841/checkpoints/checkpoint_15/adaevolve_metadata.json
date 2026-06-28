@@ -1,0 +1,230 @@
+{
+  "num_islands": 2,
+  "current_island": 1,
+  "iteration_count": 14,
+  "global_best_score": 0.7058968531566474,
+  "decay": 0.9,
+  "intensity_min": 0.15,
+  "intensity_max": 0.5,
+  "migration_interval": 8,
+  "diversity_strategy_type": "code",
+  "use_unified_archive": true,
+  "use_adaptive_search": true,
+  "use_ucb_selection": true,
+  "fixed_intensity": 0.4,
+  "adapter": {
+    "states": [
+      {
+        "accumulated_signal": 0.18816067054015692,
+        "best_score": 0.7058968531566474,
+        "improvement_count": 4,
+        "total_evaluations": 8,
+        "decay": 0.9,
+        "epsilon": 1e-08,
+        "intensity_min": 0.15,
+        "intensity_max": 0.5
+      },
+      {
+        "accumulated_signal": 0.115726585357886,
+        "best_score": 0.7058968531566474,
+        "improvement_count": 4,
+        "total_evaluations": 6,
+        "decay": 0.9,
+        "epsilon": 1e-08,
+        "intensity_min": 0.15,
+        "intensity_max": 0.5
+      }
+    ],
+    "dimension_visits": [
+      8,
+      6
+    ],
+    "dimension_rewards": [
+      1.3245859174175498,
+      0.7035922538569522
+    ],
+    "decayed_visits": [
+      5.6953279000000006,
+      4.68559
+    ],
+    "global_best_score": 0.7058968531566474,
+    "ucb_exploration": 1.41,
+    "min_visits": 3,
+    "decay": 0.9,
+    "epsilon": 1e-08
+  },
+  "island_config_names": [
+    "balanced",
+    "balanced"
+  ],
+  "islands": [
+    [
+      "10ff5e7e-5f85-4368-980a-0d452165d1cf",
+      "9a099588-6d92-4804-b897-18d701926943",
+      "8d337bad-d1be-486d-a3d3-12d1717a8855",
+      "0d6eea04-d518-49f8-9e1f-0f0018003780",
+      "31faf506-b8be-4f53-89b5-6407aa8773d4",
+      "76298b4c-476b-4a61-b2bb-6c44eff7b043",
+      "93d10648-1e06-4b7e-930e-ec622df6f91c",
+      "8a324c5f-6bad-4e94-bd9e-605d23eb2cb7"
+    ],
+    [
+      "ce0c9aef-079b-4c85-bf00-c8bf2bc3bad1",
+      "d2a31ebe-bdbb-4e68-9fd1-8b3de4d052c7",
+      "3f928fa7-352a-496e-a150-2c06b0437ad4",
+      "ea4184c7-6103-4037-97a4-cf91f361c178",
+      "5e224c71-57f7-49e0-aa3c-9e7de60c5893",
+      "2e7d8da2-15fd-48e8-b77a-74809717d58f",
+      "e56fe51e-70b7-4015-9e95-871c73ed38aa",
+      "d9415790-10cb-4971-9f87-d5fb0e99195a",
+      "08964d45-454f-4160-94a6-e5af8e58043e",
+      "cf8ad6dd-d02c-4e3a-9ef1-e48dbcb4c2b4"
+    ]
+  ],
+  "archive_genealogies": [
+    {
+      "parents": {
+        "10ff5e7e-5f85-4368-980a-0d452165d1cf": [],
+        "9a099588-6d92-4804-b897-18d701926943": [
+          "10ff5e7e-5f85-4368-980a-0d452165d1cf"
+        ],
+        "8d337bad-d1be-486d-a3d3-12d1717a8855": [
+          "9a099588-6d92-4804-b897-18d701926943"
+        ],
+        "0d6eea04-d518-49f8-9e1f-0f0018003780": [
+          "9a099588-6d92-4804-b897-18d701926943"
+        ],
+        "31faf506-b8be-4f53-89b5-6407aa8773d4": [
+          "8d337bad-d1be-486d-a3d3-12d1717a8855"
+        ],
+        "76298b4c-476b-4a61-b2bb-6c44eff7b043": [
+          "5e224c71-57f7-49e0-aa3c-9e7de60c5893"
+        ],
+        "93d10648-1e06-4b7e-930e-ec622df6f91c": [
+          "31faf506-b8be-4f53-89b5-6407aa8773d4"
+        ],
+        "8a324c5f-6bad-4e94-bd9e-605d23eb2cb7": [
+          "31faf506-b8be-4f53-89b5-6407aa8773d4"
+        ]
+      },
+      "children": {
+        "10ff5e7e-5f85-4368-980a-0d452165d1cf": [
+          "9a099588-6d92-4804-b897-18d701926943"
+        ],
+        "9a099588-6d92-4804-b897-18d701926943": [
+          "8d337bad-d1be-486d-a3d3-12d1717a8855",
+          "0d6eea04-d518-49f8-9e1f-0f0018003780"
+        ],
+        "8d337bad-d1be-486d-a3d3-12d1717a8855": [
+          "31faf506-b8be-4f53-89b5-6407aa8773d4"
+        ],
+        "5e224c71-57f7-49e0-aa3c-9e7de60c5893": [
+          "76298b4c-476b-4a61-b2bb-6c44eff7b043"
+        ],
+        "31faf506-b8be-4f53-89b5-6407aa8773d4": [
+          "93d10648-1e06-4b7e-930e-ec622df6f91c",
+          "8a324c5f-6bad-4e94-bd9e-605d23eb2cb7"
+        ]
+      }
+    },
+    {
+      "parents": {
+        "ce0c9aef-079b-4c85-bf00-c8bf2bc3bad1": [],
+        "d2a31ebe-bdbb-4e68-9fd1-8b3de4d052c7": [
+          "ce0c9aef-079b-4c85-bf00-c8bf2bc3bad1"
+        ],
+        "3f928fa7-352a-496e-a150-2c06b0437ad4": [
+          "ce0c9aef-079b-4c85-bf00-c8bf2bc3bad1"
+        ],
+        "ea4184c7-6103-4037-97a4-cf91f361c178": [
+          "3f928fa7-352a-496e-a150-2c06b0437ad4"
+        ],
+        "5e224c71-57f7-49e0-aa3c-9e7de60c5893": [
+          "ea4184c7-6103-4037-97a4-cf91f361c178"
+        ],
+        "2e7d8da2-15fd-48e8-b77a-74809717d58f": [
+          "31faf506-b8be-4f53-89b5-6407aa8773d4"
+        ],
+        "e56fe51e-70b7-4015-9e95-871c73ed38aa": [
+          "0d6eea04-d518-49f8-9e1f-0f0018003780"
+        ],
+        "d9415790-10cb-4971-9f87-d5fb0e99195a": [
+          "9a099588-6d92-4804-b897-18d701926943"
+        ],
+        "08964d45-454f-4160-94a6-e5af8e58043e": [
+          "5e224c71-57f7-49e0-aa3c-9e7de60c5893"
+        ],
+        "cf8ad6dd-d02c-4e3a-9ef1-e48dbcb4c2b4": [
+          "d2a31ebe-bdbb-4e68-9fd1-8b3de4d052c7"
+        ]
+      },
+      "children": {
+        "ce0c9aef-079b-4c85-bf00-c8bf2bc3bad1": [
+          "d2a31ebe-bdbb-4e68-9fd1-8b3de4d052c7",
+          "3f928fa7-352a-496e-a150-2c06b0437ad4"
+        ],
+        "3f928fa7-352a-496e-a150-2c06b0437ad4": [
+          "ea4184c7-6103-4037-97a4-cf91f361c178"
+        ],
+        "ea4184c7-6103-4037-97a4-cf91f361c178": [
+          "5e224c71-57f7-49e0-aa3c-9e7de60c5893"
+        ],
+        "31faf506-b8be-4f53-89b5-6407aa8773d4": [
+          "2e7d8da2-15fd-48e8-b77a-74809717d58f"
+        ],
+        "0d6eea04-d518-49f8-9e1f-0f0018003780": [
+          "e56fe51e-70b7-4015-9e95-871c73ed38aa"
+        ],
+        "9a099588-6d92-4804-b897-18d701926943": [
+          "d9415790-10cb-4971-9f87-d5fb0e99195a"
+        ],
+        "5e224c71-57f7-49e0-aa3c-9e7de60c5893": [
+          "08964d45-454f-4160-94a6-e5af8e58043e"
+        ],
+        "d2a31ebe-bdbb-4e68-9fd1-8b3de4d052c7": [
+          "cf8ad6dd-d02c-4e3a-9ef1-e48dbcb4c2b4"
+        ]
+      }
+    }
+  ],
+  "use_paradigm_breakthrough": true,
+  "paradigm_tracker": {
+    "window_size": 6,
+    "improvement_threshold": 0.05,
+    "max_paradigm_uses": 2,
+    "max_tried_paradigms": 10,
+    "num_paradigms_to_generate": 2,
+    "improvement_history": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "active_paradigms": [
+      {
+        "idea": "Custom Triton kernel fusing dropout backward + softmax backward + both BMMs",
+        "description": "Write a Triton kernel that processes tiles of the attention weight matrix. For dS computation: load tiles of P and dP_dropped, apply dropout mask and scale, compute softmax backward locally. For dV: accumulate contributions from P_dropped^T @ dO across the sq dimension. The key insight is that the [bs, 80, sq, skv] tensors are the bottleneck - reading them multiple times is expensive. A fused kernel reads P, P_dropped, dropout_mask once and computes both dS and partial dV in one pass. Use separate Triton kernels for dS (fused with dropout) and dV (exploiting GQA by having each kernel block handle one KV head, accumulating over 10 query heads). For dV specifically: launch [bs, 8, skv//BLOCK, 128//BLOCK] blocks, each iterating over sq and the 10 groups, accumulating in fp32 registers. For dS: launch [bs, 80, sq, 1] blocks, each computing the row-wise softmax backward.",
+        "what_to_optimize": "Memory bandwidth - avoid multiple passes over large tensors, reduce global memory traffic by fusing elementwise ops with matmuls",
+        "cautions": "Need careful handling of non-power-of-2 sequence lengths with masking. The GQA structure means dV kernel should accumulate over 10 groups. Use tl.dot for the matmul tiles. Ensure bf16 inputs with fp32 accumulation. Handle the bs*80 batch dimension carefully for parallelism.",
+        "approach_type": "triton.jit"
+      },
+      {
+        "idea": "Flash-attention-style fused Triton kernel using CUDA graphs + optimized memory layout",
+        "description": "Implement two highly optimized Triton kernels: (1) dS kernel that processes [bs*80, sq, skv] with each program handling one row of sq, loading P and P_dropped tiles along skv, computing dP=dP_dropped*mask/scale, then softmax_bwd = P*(dP - sum(dP*P)) all in registers without materializing dP_dropped globally - instead computing it on-the-fly from dO and V using tl.dot. (2) dV kernel that uses GQA structure: each Triton program handles one (bs, kv_head, skv_block) and accumulates over all 10 query groups and sq positions. Wrap with torch.cuda.make_graphed_callables or use cudagraph_trees via torch.compile with CUDA graphs to eliminate kernel launch overhead. The fused approach for dS avoids writing dP_dropped to HBM entirely - dO @ V^T is computed tile-by-tile inside the kernel and immediately used for softmax backward.",
+        "what_to_optimize": "Eliminate HBM writes of intermediate dP_dropped tensor, reduce kernel launch overhead with CUDA graphs, maximize arithmetic intensity",
+        "cautions": "The fully fused dS kernel (computing dO@V^T on-the-fly) requires loading both dO and V tiles which increases register pressure. May need to tune BLOCK_SIZE carefully. For non-square cases (sq != skv), need proper boundary masking. The GQA dV kernel needs to handle the group reduction correctly.",
+        "approach_type": "triton.jit.fused_flash_style"
+      }
+    ],
+    "paradigm_usage_counts": {
+      "0": 2,
+      "1": 1
+    },
+    "current_paradigm_index": 1,
+    "tried_paradigms": [],
+    "best_score_at_paradigm_gen": 0.7058968531566474,
+    "best_score_during_paradigm": 0.7058968531566474
+  }
+}

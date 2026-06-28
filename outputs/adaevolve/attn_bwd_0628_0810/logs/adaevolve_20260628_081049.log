@@ -1,0 +1,125 @@
+2026-06-28 08:10:49,031 - skydiscover.search.utils.logging_utils - INFO - Logging to outputs/adaevolve/attn_bwd_0628_0810/logs/adaevolve_20260628_081049.log
+2026-06-28 08:10:50,356 - skydiscover.search.main_controller - INFO - Set random seed to 42 for reproducibility
+2026-06-28 08:10:50,413 - skydiscover.search.adaevolve.database - INFO - AdaEvolveDatabase initialized: num_islands=2, decay=0.9, intensity=[0.15, 0.5], migration=True (interval=8), unified_archive=True, adaptive_search=True, ucb_selection=True, dynamic_islands=False, paradigm_breakthrough=True
+2026-06-28 08:10:50,415 - skydiscover.search.main_controller - INFO - Initialized discovery process with search strategy = adaevolve and initial program = attn_bwd/starting_point.py
+2026-06-28 08:10:51,176 - skydiscover.llm - INFO - Initialized Anthropic LLM with model: claude-sonnet-4-6
+2026-06-28 08:10:51,177 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:10:51,195 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:10:51,228 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:10:51,279 - skydiscover.prompt.default.prompt - INFO - Initialized default context builder
+2026-06-28 08:10:51,335 - skydiscover.prompt.default.prompt - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-06-28 08:10:51,371 - skydiscover.evaluation.evaluator - INFO - Initialized evaluator with attn_bwd/evaluator.py
+2026-06-28 08:10:51,372 - skydiscover.search.default_discovery_manager - INFO - DiscoveryManager initialized: num_inspirations=4
+2026-06-28 08:10:51,391 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:10:51,517 - skydiscover.prompt.default.prompt - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-06-28 08:10:51,535 - skydiscover.llm - INFO - Initialized LLM pool with models: claude-sonnet-4-6 (weight: 1.00)
+2026-06-28 08:10:51,544 - skydiscover.evaluation.evaluator - INFO - Initialized evaluator with attn_bwd/evaluator.py
+2026-06-28 08:10:51,545 - skydiscover.search.adaevolve.manager - INFO - Paradigm LLM: using guide_models [claude-sonnet-4-6]
+2026-06-28 08:10:51,551 - skydiscover.search.adaevolve.manager - INFO - AdaEvolveManager initialized (language=python, paradigm_breakthrough=True)
+2026-06-28 08:10:51,552 - skydiscover.search.main_controller - INFO - Adding initial program to database
+2026-06-28 08:10:51,554 - root - INFO - Evaluating program 67aea14e-f838-4cc6-bc09-d1d800e56047
+2026-06-28 08:11:18,485 - skydiscover.evaluation.evaluator - INFO - Evaluated program 67aea14e-f838-4cc6-bc09-d1d800e56047 in 26.93s: combined_score=0.2187, geomean_us=3456.7760
+2026-06-28 08:11:18,486 - skydiscover.search.base_database - INFO - Database has 1 programs, best program score is 0.218701
+2026-06-28 08:11:18,487 - skydiscover.search.adaevolve.manager - INFO - AdaEvolve: Running 25 iterations across 2 islands
+2026-06-28 08:11:18,491 - skydiscover.search.adaevolve.manager - INFO - AdaEvolve iteration stats will be logged to: outputs/adaevolve/attn_bwd_0628_0810/adaevolve_iteration_stats_20260628_081118.jsonl
+2026-06-28 08:11:18,492 - skydiscover.search.adaevolve.manager - INFO - Seeded island 1
+2026-06-28 08:11:48,235 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:11:48,256 - root - INFO - Evaluating program 63420f76-da4b-48ed-9dee-99b528b18e75
+2026-06-28 08:12:15,341 - skydiscover.evaluation.evaluator - INFO - Evaluated program 63420f76-da4b-48ed-9dee-99b528b18e75 in 27.09s: combined_score=0.4263, geomean_us=1773.5910
+2026-06-28 08:12:15,342 - skydiscover.search.adaevolve.manager - INFO - Iteration 1: Program 63420f76 (parent: 67aea14e) completed in 56.85s
+2026-06-28 08:12:15,344 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.4263, geomean_us=1773.5910
+2026-06-28 08:12:15,345 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 1
+2026-06-28 08:12:33,548 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:12:33,553 - root - INFO - Evaluating program 7d917b21-84b6-465c-a0d6-7cdcf3c491bd
+2026-06-28 08:12:55,571 - skydiscover.evaluation.evaluator - INFO - Evaluated program 7d917b21-84b6-465c-a0d6-7cdcf3c491bd in 22.02s: combined_score=0.9361, geomean_us=807.5680
+2026-06-28 08:12:55,572 - skydiscover.search.adaevolve.manager - INFO - Iteration 2: Program 7d917b21 (parent: bb40e380) completed in 40.21s
+2026-06-28 08:12:55,574 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.9361, geomean_us=807.5680
+2026-06-28 08:12:55,575 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 2
+2026-06-28 08:13:12,362 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:13:12,366 - root - INFO - Evaluating program b57c6583-f028-49b1-af6c-be7284a63396
+2026-06-28 08:13:34,126 - skydiscover.evaluation.evaluator - INFO - Evaluated program b57c6583-f028-49b1-af6c-be7284a63396 in 21.76s: combined_score=0.9375, geomean_us=806.3570
+2026-06-28 08:13:34,127 - skydiscover.search.adaevolve.manager - INFO - Iteration 3: Program b57c6583 (parent: 63420f76) completed in 38.54s
+2026-06-28 08:13:34,129 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.9375, geomean_us=806.3570
+2026-06-28 08:13:34,130 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 3
+2026-06-28 08:13:49,978 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:13:49,982 - root - INFO - Evaluating program 1420ad3d-36db-432a-9ecb-b4c86191265a
+2026-06-28 08:14:11,882 - skydiscover.evaluation.evaluator - INFO - Evaluated program 1420ad3d-36db-432a-9ecb-b4c86191265a in 21.90s: combined_score=0.9373, geomean_us=806.5470
+2026-06-28 08:14:11,884 - skydiscover.search.adaevolve.manager - INFO - Iteration 4: Program 1420ad3d (parent: bb40e380) completed in 37.74s
+2026-06-28 08:14:11,885 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.9373, geomean_us=806.5470
+2026-06-28 08:14:48,256 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:14:48,262 - root - INFO - Evaluating program bbe260b5-086c-43e1-ab4c-ea133ea7e10e
+2026-06-28 08:15:20,472 - skydiscover.evaluation.evaluator - INFO - Evaluated program bbe260b5-086c-43e1-ab4c-ea133ea7e10e in 32.21s: combined_score=0.8513, geomean_us=888.0700
+2026-06-28 08:15:20,475 - skydiscover.search.adaevolve.manager - INFO - Iteration 5: Program bbe260b5 (parent: 1420ad3d) completed in 68.55s
+2026-06-28 08:15:20,476 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.8513, geomean_us=888.0700
+2026-06-28 08:15:20,477 - skydiscover.search.adaevolve.manager - INFO - Checkpoint interval reached at iteration 5
+2026-06-28 08:15:20,479 - skydiscover.search.base_database - INFO - Database has 7 programs, best program score is 0.937550
+2026-06-28 08:15:20,637 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 7 programs to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_5
+2026-06-28 08:15:20,647 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_5
+2026-06-28 08:15:20,661 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 5 with metrics: combined_score=0.9375, geomean_us=806.3570
+2026-06-28 08:15:20,662 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 5 to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_5
+2026-06-28 08:16:52,776 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:16:52,836 - root - INFO - Evaluating program 2b691fca-d385-487c-8d68-71ff14d95fc3
+2026-06-28 08:17:19,264 - skydiscover.evaluation.evaluator - INFO - Evaluated program 2b691fca-d385-487c-8d68-71ff14d95fc3 in 26.43s: combined_score=0.9326, geomean_us=810.6120
+2026-06-28 08:17:19,266 - skydiscover.search.adaevolve.manager - INFO - Iteration 6: Program 2b691fca (parent: b57c6583) completed in 118.54s
+2026-06-28 08:17:19,267 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=0.9326, geomean_us=810.6120
+2026-06-28 08:18:28,409 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:18:28,414 - root - INFO - Evaluating program 9f7a265a-e00b-468a-864d-2d30fab68ac2
+2026-06-28 08:18:39,420 - skydiscover.evaluation.evaluator - INFO - Evaluated program 9f7a265a-e00b-468a-864d-2d30fab68ac2 in 11.01s: combined_score=1.2344, geomean_us=612.4630
+2026-06-28 08:18:39,421 - skydiscover.search.adaevolve.manager - INFO - Iteration 7: Program 9f7a265a (parent: b57c6583) completed in 80.12s
+2026-06-28 08:18:39,422 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.2344, geomean_us=612.4630
+2026-06-28 08:18:39,423 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 7
+2026-06-28 08:19:06,236 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:19:06,241 - root - INFO - Evaluating program 0e8ea200-d744-4130-88a8-b4332953cba6
+2026-06-28 08:19:15,461 - skydiscover.evaluation.evaluator - INFO - Evaluated program 0e8ea200-d744-4130-88a8-b4332953cba6 in 9.22s: combined_score=1.1770, geomean_us=642.3270
+2026-06-28 08:19:15,462 - skydiscover.search.adaevolve.manager - INFO - Iteration 8: Program 0e8ea200 (parent: 1420ad3d) completed in 35.97s
+2026-06-28 08:19:15,463 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.1770, geomean_us=642.3270
+2026-06-28 08:19:15,516 - skydiscover.search.adaevolve.database - INFO - Migration completed at iteration 8
+2026-06-28 08:20:10,570 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:20:10,574 - root - INFO - Evaluating program 9db4625f-0cb0-4684-bee6-4355849f8072
+2026-06-28 08:20:20,231 - skydiscover.evaluation.evaluator - INFO - Evaluated program 9db4625f-0cb0-4684-bee6-4355849f8072 in 9.66s: combined_score=1.6785, geomean_us=450.4140
+2026-06-28 08:20:20,232 - skydiscover.search.adaevolve.manager - INFO - Iteration 9: Program 9db4625f (parent: 9f7a265a) completed in 64.70s
+2026-06-28 08:20:20,233 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.6785, geomean_us=450.4140
+2026-06-28 08:20:20,234 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 9
+2026-06-28 08:20:44,289 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:20:44,294 - root - INFO - Evaluating program 14212fcc-8135-4d59-ad32-3b55a879c54f
+2026-06-28 08:20:58,076 - skydiscover.evaluation.evaluator - INFO - Evaluated program 14212fcc-8135-4d59-ad32-3b55a879c54f in 13.78s: combined_score=1.5755, geomean_us=479.8560
+2026-06-28 08:20:58,077 - skydiscover.search.adaevolve.manager - INFO - Iteration 10: Program 14212fcc (parent: 0e8ea200) completed in 37.66s
+2026-06-28 08:20:58,079 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.5755, geomean_us=479.8560
+2026-06-28 08:20:58,080 - skydiscover.search.adaevolve.manager - INFO - Checkpoint interval reached at iteration 10
+2026-06-28 08:20:58,081 - skydiscover.search.base_database - INFO - Database has 16 programs, best program score is 1.678456
+2026-06-28 08:20:58,280 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 16 programs to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_10
+2026-06-28 08:20:58,289 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_10
+2026-06-28 08:20:58,310 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 10 with metrics: combined_score=1.6785, geomean_us=450.4140
+2026-06-28 08:20:58,312 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 10 to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_10
+2026-06-28 08:21:23,745 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:21:23,749 - root - INFO - Evaluating program 6518299d-5e62-4f62-9d8f-afdb03a34730
+2026-06-28 08:21:37,840 - skydiscover.evaluation.evaluator - INFO - Evaluated program 6518299d-5e62-4f62-9d8f-afdb03a34730 in 14.09s: combined_score=1.6833, geomean_us=449.1100
+2026-06-28 08:21:37,842 - skydiscover.search.adaevolve.manager - INFO - Iteration 11: Program 6518299d (parent: 7d917b21) completed in 39.39s
+2026-06-28 08:21:37,842 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.6833, geomean_us=449.1100
+2026-06-28 08:21:37,844 - skydiscover.search.adaevolve.manager - INFO - New best solution found at iteration 11
+2026-06-28 08:22:31,676 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:22:31,685 - root - INFO - Evaluating program f269b6eb-45b7-4aa9-bb4f-f9c39db4cb01
+2026-06-28 08:22:50,070 - skydiscover.evaluation.evaluator - INFO - Evaluated program f269b6eb-45b7-4aa9-bb4f-f9c39db4cb01 in 18.39s: combined_score=1.6340, geomean_us=462.6610
+2026-06-28 08:22:50,071 - skydiscover.search.adaevolve.manager - INFO - Iteration 12: Program f269b6eb (parent: 9db4625f) completed in 72.04s
+2026-06-28 08:22:50,071 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.6340, geomean_us=462.6610
+2026-06-28 08:23:16,682 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:23:16,688 - root - INFO - Evaluating program 43edd38c-fcc4-4c78-a44a-7e7d781d1cc2
+2026-06-28 08:23:35,516 - skydiscover.evaluation.evaluator - INFO - Evaluated program 43edd38c-fcc4-4c78-a44a-7e7d781d1cc2 in 18.83s: combined_score=1.6823, geomean_us=449.3930
+2026-06-28 08:23:35,563 - skydiscover.search.adaevolve.manager - INFO - Iteration 13: Program 43edd38c (parent: bb40e380) completed in 45.34s
+2026-06-28 08:23:35,565 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.6823, geomean_us=449.3930
+2026-06-28 08:24:06,186 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:24:06,189 - root - INFO - Evaluating program d2875521-ff07-4ee7-84a6-0ecc9f55e38f
+2026-06-28 08:24:16,871 - skydiscover.evaluation.evaluator - INFO - Evaluated program d2875521-ff07-4ee7-84a6-0ecc9f55e38f in 10.68s: combined_score=1.6167, geomean_us=467.6060
+2026-06-28 08:24:16,872 - skydiscover.search.adaevolve.manager - INFO - Iteration 14: Program d2875521 (parent: 9db4625f) completed in 41.15s
+2026-06-28 08:24:16,873 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.6167, geomean_us=467.6060
+2026-06-28 08:25:07,515 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 08:25:07,519 - root - INFO - Evaluating program a9e8cfc7-8193-41af-bae2-16c9d9296a82
+2026-06-28 08:25:26,977 - skydiscover.evaluation.evaluator - INFO - Evaluated program a9e8cfc7-8193-41af-bae2-16c9d9296a82 in 19.46s: combined_score=1.4692, geomean_us=514.5650
+2026-06-28 08:25:27,013 - skydiscover.search.adaevolve.manager - INFO - Iteration 15: Program a9e8cfc7 (parent: 6518299d) completed in 69.96s
+2026-06-28 08:25:27,014 - skydiscover.search.adaevolve.manager - INFO - Metrics: combined_score=1.4692, geomean_us=514.5650
+2026-06-28 08:25:27,016 - skydiscover.search.adaevolve.manager - INFO - Checkpoint interval reached at iteration 15
+2026-06-28 08:25:27,017 - skydiscover.search.base_database - INFO - Database has 20 programs, best program score is 1.683329
+2026-06-28 08:25:27,282 - skydiscover.search.utils.checkpoint_manager - INFO - [CHECKPOINT] Saved database with 19 programs to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_15
+2026-06-28 08:25:27,332 - skydiscover.search.adaevolve.database - INFO - Saved AdaEvolve state to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_15
+2026-06-28 08:25:27,349 - skydiscover.search.main_controller - INFO - [CHECKPOINT] Saved best program at checkpoint 15 with metrics: combined_score=1.6833, geomean_us=449.1100
+2026-06-28 08:25:27,351 - skydiscover.search.main_controller - INFO - Saved checkpoint at iteration 15 to outputs/adaevolve/attn_bwd_0628_0810/checkpoints/checkpoint_15

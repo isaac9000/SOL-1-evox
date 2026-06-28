@@ -1,0 +1,117 @@
+# AdaEvolve config for attn_bwd kernel optimization on NVIDIA B200.
+#
+# Run:
+#   bash run_agent.sh
+# Or directly:
+#   uv run skydiscover-run attn_bwd/starting_point.py attn_bwd/evaluator.py \
+#       --config attn_bwd/config.yaml
+
+max_iterations: 25
+checkpoint_interval: 5
+log_level: "INFO"
+
+llm:
+  models:
+    - name: "anthropic/claude-sonnet-4-6"
+      weight: 1.0
+  temperature: 0.7
+  top_p: null
+  max_tokens: 8096
+  timeout: 300
+
+search:
+  type: "adaevolve"
+  num_inspirations: 4
+  database:
+    population_size: 10
+    num_islands: 2
+    decay: 0.9
+    intensity_min: 0.15
+    intensity_max: 0.5
+    use_adaptive_search: true
+    use_ucb_selection: true
+    use_migration: true
+    use_unified_archive: true
+    migration_interval: 8
+    migration_count: 3
+    fitness_weight: 1.0
+    novelty_weight: 0.0
+    diversity_strategy: "code"
+    use_dynamic_islands: false
+    use_paradigm_breakthrough: true
+    paradigm_window_size: 6
+    paradigm_improvement_threshold: 0.05
+    paradigm_max_uses: 2
+    paradigm_max_tried: 10
+    paradigm_num_to_generate: 2
+    enable_error_retry: true
+    max_error_retries: 2
+
+prompt:
+  system_message: |
+    You are optimizing a GPU kernel for the attention backward pass on NVIDIA B200.
+
+    ## Task
+
+    Implement `custom_kernel(data)` as fast as possible. It receives a tuple:
+
+        data = (grad_attn_output,       # [bs, seq_q, 80, 128]        bfloat16
+                attn_weights,           # [bs, 80, seq_q, seq_kv]     bfloat16
+                attn_weights_dropped,   # [bs, 80, seq_q, seq_kv]     bfloat16
+                value_states,           # [bs, 8, seq_kv, 128]        bfloat16
+                dropout_mask,           # [bs, 80, seq_q, seq_kv]     bool
+                attention_dropout)      # scalar float (0.1)
+
+    And returns:
+
+        grad_attn_scores       [bs, 80, seq_q, seq_kv]  bfloat16
+        grad_value_states      [bs, 8, seq_kv, 128]     bfloat16
+
+    Fixed architecture: 80 attention heads, 8 KV heads, head_dim=128,
+    10 groups per KV head, attention_dropout=0.1.
+
+    ## Reference Algorithm
+
+        # GQA expand: value_states [bs,8,skv,128] -> value_states_exp [bs,80,skv,128]
+        dO = grad_attn_output.transpose(1,2).float()       # [bs,80,sq,128]
+        dP_dropped = dO @ value_states_exp.T               # [bs,80,sq,skv]  bmm #1
+        dP = dP_dropped * dropout_mask / (1 - p)          # dropout backward
+        P  = attn_weights.float()
+        dS = P * (dP - (dP * P).sum(-1, keepdim=True))    # softmax backward
+        dV_exp = attn_weights_dropped.T @ dO               # [bs,80,skv,128] bmm #2
+        dV = dV_exp.reshape(bs,8,10,skv,128).sum(dim=2)
+        return dS.to(bf16), dV.to(bf16)
+
+    ## Evaluation Metric
+
+    Score = 756 / geomean_us across 16 benchmark cases (higher is better).
+      - Baseline pure PyTorch: ~1.0 (756 us geomean)
+      - SOL target: ~9.3 (82 us geomean)
+    Correctness tolerance: rtol=1e-2, atol=1e-2.
+    Run-to-run variance on Modal B200: ~5-20 us small cases, ~20-80 us large cases.
+
+    ## Benchmark Cases (16 total)
+
+      bs=4  sq=256  skv=256   | bs=8  sq=373  skv=449  | bs=4  sq=1024 skv=2048
+      bs=64 sq=128  skv=128   | bs=2  sq=256  skv=512  | bs=32 sq=691  skv=773
+      bs=8  sq=128  skv=128   | bs=32 sq=512  skv=512  | bs=4  sq=211  skv=293
+      bs=8  sq=256  skv=256   | bs=16 sq=128  skv=256  | bs=1  sq=1024 skv=1024
+      bs=16 sq=256  skv=512   | bs=32 sq=128  skv=128  | bs=1  sq=512  skv=512
+      bs=1  sq=4096 skv=4096
+
+    ## Environment
+
+    Target: NVIDIA B200 | PyTorch 2.6 | CUDA 12.4 | Triton available.
+    Allowed: Triton kernels, torch.compile, inline CUDA via load_inline, pure PyTorch.
+    The file must define `custom_kernel(data)` as the entry point.
+    Include all imports at the top of the file.
+
+    Preserve the custom_kernel(data) entry point and return types.
+
+evaluator:
+  timeout: 700
+  max_retries: 2
+  cascade_evaluation: false
+
+diff_based_generation: false
+max_solution_length: 60000
